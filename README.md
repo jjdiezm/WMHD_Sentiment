@@ -5,7 +5,7 @@ Python study of tweets related with World Mental Health Day 2021
 [![Anaconda 3](https://anaconda.org/conda-forge/python/badges/version.svg)](https://docs.anaconda.com/anaconda/reference/release-notes/)
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 
-This Python aplication consists on six files:
+## This Python aplication consists on six files:
 
 1.	**[DBAccessHelper.py](https://github.com/jjdiezm/WMHD_Sentiment/blob/main/DBAccessHelper.py)** Python class with MS Access read and write operations. Some text processing function are mixed with it to optimize DB commits.
 2.	**[auth_twitter.py](https://github.com/jjdiezm/WMHD_Sentiment/blob/main/auth_twitter.py)** Personal credentials to access Twitter API, it's filled with ****************** that must be changed by real credentials.
