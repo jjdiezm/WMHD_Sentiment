@@ -15,7 +15,7 @@ Python coded analysis of tweets related with World Mental Health Day 2021
 5.	**[sentiment.py](https://github.com/jjdiezm/WMHD_Sentiment/blob/main/sentiment.py)** Sentiment analysis functions. Based on TextBlob and Vader. Includes reporting and graphic generation.
 6.	**[main.py](https://github.com/jjdiezm/WMHD_Sentiment/blob/main/main.py)** Console menu to handle the functions and simplify the aplication use.
 
-The Python is designed to use the Access file included [tweets_db.accdb](https://github.com/jjdiezm/WMHD_Sentiment/blob/main/tweets_db.accdb).  
+This Python code is designed to use the Access file included [tweets_db.accdb](https://github.com/jjdiezm/WMHD_Sentiment/blob/main/tweets_db.accdb).  
 Access must be used under Microsoft license, you can easily change it by other SQL database changing the connection string at [DBAccessHelper.py](https://github.com/jjdiezm/WMHD_Sentiment/blob/main/DBAccessHelper.py), SQL used is very standard.  
 
 Functions are documented, and you can use [pydoc](https://docs.python.org/3/library/pydoc.html) to consult their use, you can try to execute in console at your local folder with the repository: `python -m pydoc -b`.
