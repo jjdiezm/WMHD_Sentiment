@@ -17,7 +17,7 @@ This Python aplication consists on six files:
 The Python is designed to use the Access file included [tweets_db.accdb](https://github.com/jjdiezm/WMHD_Sentiment/blob/main/tweets_db.accdb).  
 Access must be used under Microsoft license, you can easily change it by other SQL database changing the connection string at [DBAccessHelper.py](https://github.com/jjdiezm/WMHD_Sentiment/blob/main/DBAccessHelper.py), SQL used is very standard.  
 
-Functions are documented, and you can use pydoc to consult their use, you can try to execute in console `python -m pydoc -b` in your local folder with the repository.
+Functions are documented, and you can use [pydoc](https://docs.python.org/3/library/pydoc.html) to consult their use, you can try to execute in console `python -m pydoc -b` in your local folder with the repository.
 
 The application was built for my Final Master Project at [Universitat Oberta de Catalunya - UOC](https://www.uoc.edu).  
 Use it at your convenience but please respect the open source license [GPL v3](https://github.com/jjdiezm/WMHD_Sentiment/blob/main/LICENSE).
