@@ -18,7 +18,7 @@ Python coded analysis of tweets related with World Mental Health Day 2021
 The Python is designed to use the Access file included [tweets_db.accdb](https://github.com/jjdiezm/WMHD_Sentiment/blob/main/tweets_db.accdb).  
 Access must be used under Microsoft license, you can easily change it by other SQL database changing the connection string at [DBAccessHelper.py](https://github.com/jjdiezm/WMHD_Sentiment/blob/main/DBAccessHelper.py), SQL used is very standard.  
 
-Functions are documented, and you can use [pydoc](https://docs.python.org/3/library/pydoc.html) to consult their use, you can try to execute in console `python -m pydoc -b` in your local folder with the repository.
+Functions are documented, and you can use [pydoc](https://docs.python.org/3/library/pydoc.html) to consult their use, you can try to execute in console at your local folder with the repository: `python -m pydoc -b`.
 
 ## About World Mental Health Day
 [![WHO_Official_Logo](https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/WHO_logo.svg/100px-WHO_logo.svg.png)](https://www.who.int)  
