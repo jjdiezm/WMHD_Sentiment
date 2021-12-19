@@ -20,6 +20,12 @@ Access must be used under Microsoft license, you can easily change it by other S
 
 Functions are documented, and you can use [pydoc](https://docs.python.org/3/library/pydoc.html) to consult their use, you can try to execute in console `python -m pydoc -b` in your local folder with the repository.
 
-The application was built for my Final Master Project at [Universitat Oberta de Catalunya - UOC](https://www.uoc.edu).  
-Use it at your convenience but please respect the open source license [GPL v3](https://github.com/jjdiezm/WMHD_Sentiment/blob/main/LICENSE).
+## About World Mental Health Day
+[![WHO_Official_Logo](https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/WHO_logo.svg/100px-WHO_logo.svg.png)](https://www.who.int)  
+World Mental Health Day (WMHD) is a World Health Organization (WHO) official champain, you can obtain more info at: https://www.who.int/campaigns/world-mental-health-day/2021
 
+## About this application
+[![UOC_Official_Logo](https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/Logo_blau_uoc.png/320px-Logo_blau_uoc.png)](https://www.uoc.edu)  
+The application was built for my Final Master Project at [Universitat Oberta de Catalunya - UOC](https://www.uoc.edu).  
+  
+Use it at your convenience but please respect the open source license [GPL v3](https://github.com/jjdiezm/WMHD_Sentiment/blob/main/LICENSE).  
