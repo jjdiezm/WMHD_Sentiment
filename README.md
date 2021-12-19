@@ -1,6 +1,7 @@
 # World Mental Health Day 2021 Sentiment Analysis
-![WMHD_WHO_Official_Image](https://www.who.int/images/default-source/campaigns/world-mental-health-day/2021/who_wmhd_21_1280x720.tmb-1024v.jpg)
-Python study of tweets related with World Mental Health Day 2021  
+Python coded analysis of tweets related with World Mental Health Day 2021 
+  
+![WMHD_WHO_Official_Image](https://www.who.int/images/default-source/campaigns/world-mental-health-day/2021/who_wmhd_21_1280x720.tmb-1024v.jpg) 
 [![Python 3.7](https://img.shields.io/badge/python-3.7-blue.svg)](https://www.python.org/downloads/release/python-370/)
 [![Anaconda 3](https://anaconda.org/conda-forge/python/badges/version.svg)](https://docs.anaconda.com/anaconda/reference/release-notes/)
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
