@@ -97,15 +97,15 @@ def graphic_general():
 
     :return: Nothing
     """
-    for year_filter in ["all", "2019", "2020", "2021"]:
+    for year_filter in ["2019", "2020", "2021"]:
         tweets_df = return_all_df(year_filter)
         tweets_df['text_len'] = tweets_df['original_text'].astype(str).apply(len)
         tweets_df['text_word_count'] = tweets_df['original_text'].apply(lambda x: len(str(x).split()))
         title1 = f'Histogram by length of tweets ({year_filter})'
-        tweets_df['text_len'].plot(bins=100, kind='hist', title=title1)
+        tweets_df['text_len'].plot(bins=100, kind='hist', title=title1, xlim=(0, 400))
         plt.show()
         title2 = f'Histogram by the word counts of all tweets ({year_filter})'
-        tweets_df['text_word_count'].plot(bins=100, kind='hist', title=title2)
+        tweets_df['text_word_count'].plot(bins=100, kind='hist', title=title2, xlim=(0, 65))
         plt.show()
 
 
@@ -120,7 +120,7 @@ def print_sentiment(param_account="all", param_tweet="all"):
                           - "liked" to filter on tweets with more than 500 likes and referenced_tweets_count = 0
     :return: Nothing
     """
-    for year_filter in ["all", "2019", "2020", "2021"]:
+    for year_filter in ["2019", "2020", "2021"]:
         tweets_df = return_all_df(year_filter, param_account, param_tweet)
         for type_graphic in ["Vader", "TextBlob"]:
             title = f"{year_filter.capitalize()} Sentiment Analysis Result for {type_graphic} Analysis " \
@@ -199,32 +199,32 @@ def generate_main_cloud(param_type, algorithm="Vader"):
         sentiment_field = "vader_sentiment"
     else:
         sentiment_field = "textblob_sentiment"
-    for year_filter in ["all", "2019", "2020", "2021"]:
+    for year_filter in ["2019", "2020", "2021"]:
         tweets_df = return_all_df(year_filter)
         if param_type == "main":
-            paint_word_cloud(tweets_df["cleaned_text"].values, f"Main WordCloud for {year_filter}")
+            paint_word_cloud(tweets_df["text_reduced"].values, f"Main WordCloud for {year_filter}")
         elif param_type == "positive":
             tweet_pos = tweets_df[tweets_df[sentiment_field] == "positive"]
-            paint_word_cloud(tweet_pos["cleaned_text"].values,
+            paint_word_cloud(tweet_pos["text_reduced"].values,
                              algorithm + f" positive sentiment WordCloud for {year_filter}")
         elif param_type == "negative":
             tweet_neg = tweets_df[tweets_df[sentiment_field] == "negative"]
-            paint_word_cloud(tweet_neg["cleaned_text"].values,
+            paint_word_cloud(tweet_neg["text_reduced"].values,
                              algorithm + f" negative sentiment WordCloud for {year_filter}")
         elif param_type == "neutral":
             tweet_neu = tweets_df[tweets_df[sentiment_field] == "neutral"]
-            paint_word_cloud(tweet_neu["cleaned_text"].values,
+            paint_word_cloud(tweet_neu["text_reduced"].values,
                              algorithm + f" neutral sentiment WordCloud for {year_filter}")
         else:
             tweet_pos = tweets_df[tweets_df[sentiment_field] == "positive"]
             tweet_neg = tweets_df[tweets_df[sentiment_field] == "negative"]
             tweet_neu = tweets_df[tweets_df[sentiment_field] == "neutral"]
-            paint_word_cloud(tweets_df["cleaned_text"].values, f"Main WordCloud for {year_filter}")
-            paint_word_cloud(tweet_pos["cleaned_text"].values,
+            paint_word_cloud(tweets_df["text_reduced"].values, f"Main WordCloud for {year_filter}")
+            paint_word_cloud(tweet_pos["text_reduced"].values,
                              algorithm + f" positive sentiment WordCloud for {year_filter}")
-            paint_word_cloud(tweet_neg["cleaned_text"].values,
+            paint_word_cloud(tweet_neg["text_reduced"].values,
                              algorithm + f" negative sentiment WordCloud for {year_filter}")
-            paint_word_cloud(tweet_neu["cleaned_text"].values,
+            paint_word_cloud(tweet_neu["text_reduced"].values,
                              algorithm + f" neutral sentiment WordCloud for {year_filter}")
 
 
@@ -267,7 +267,7 @@ def most_common_words(param_filter="all", param_algorithm="Vader"):
     :param param_algorithm: define on what algorithm sentiment is based to create the list
     :return: Nothing
     """
-    for year_filter in ["all", "2019", "2020", "2021"]:
+    for year_filter in ["2019", "2020", "2021"]:
         tweets_df = return_reduced_text_df(param_filter, param_algorithm, year_filter)
         list_words = Counter(" ".join(tweets_df["text_reduced"]).split()).most_common(20)
         print("*************************************")

@@ -84,12 +84,16 @@ def tokenization(text):
 
 
 def remove_stopwords(text):
-    """ Function to remove English stop words
+    """ Function to remove English stop words, tech related words and main hashtags like #WorldMentalHealthDay
 
     :param text: text to be cleaned
     :return: cleaned text
     """
     stop_words = nltk.corpus.stopwords.words('english')
+    for year in ["", "2019", "2020", "2021"]:
+        stop_words.append("WorldMentalHealthDay".lower()+year)
+    for word in ["on", "http", "https", "amp", "rt", "co", "url"]:
+        stop_words.append(word)
     text = [word for word in text if word not in stop_words]
     return text
 
@@ -106,13 +110,16 @@ def stemming(text):
 
 
 def reduce_text(text):
-    list_text = stemming(remove_stopwords(tokenization(text.lower())))
+    list_text = remove_stopwords(tokenization(text.lower()))
     return ' '.join([str(x) for x in list_text])
 
 
 if __name__ == "__main__":
-    example_tweet = "🗣NEWS: On #WorldMentalHealthDay 10 Oct in #London, we´re launching a powerful new exhibition " \
+    example_tweet = "🗣NEWS: On #WorldMentalHealthDay #WorldMentalHealthDay2021 10 Oct in #London, we´re " \
+                    "launching a powerful new exhibition " \
                     "in partnership with @HSBC exploring the dreams lost to neglected #mentalhealth &amp; #suicide, " \
                     "&amp; the hope that´s found through support. 👇 https://t.co/StdqqoQMxA #SpeakYourMind " \
                     "#40seconds https://t.co/r8LotSXPBY"
-    print(normalize_tweet(example_tweet))
+    print(example_tweet+"\n")
+    print(normalize_tweet(example_tweet)+"\n")
+    print(reduce_text(example_tweet)+"\n")
